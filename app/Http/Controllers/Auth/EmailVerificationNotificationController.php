@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\SlopeSquadBaseController;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
-class EmailVerificationNotificationController extends Controller
+class EmailVerificationNotificationController extends SlopeSquadBaseController
 {
     /**
      * Send a new email verification notification.
