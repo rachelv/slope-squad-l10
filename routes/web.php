@@ -56,6 +56,12 @@ Route::prefix('members')->group(function () {
         ->whereNumber('id')
         ->name('users.mountains');
 
+
+    Route::get('/{id}/mountains/{mountainId}', [UsersController::class, 'mountain'])
+        ->whereNumber('id')
+        ->whereNumber('mountainId')
+        ->name('users.mountain');
+
     Route::get('/{id}/seasons', [UsersController::class, 'seasons'])
         ->whereNumber('id')
         ->name('users.seasons');

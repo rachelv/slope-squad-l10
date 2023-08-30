@@ -5,7 +5,7 @@
             <p>Built with 🩵 and ❄️ in Colorado</p>
         </div>
         <div class="text-center text-sm">
-            <span class="sm:hidden md:hidden lg:hidden xl:hidden">default</span>
+            <span class="sm:hidden md:hidden lg:hidden xl:hidden">xs</span>
             <span class="hidden sm:inline md:hidden">sm</span>
             <span class="hidden md:inline lg:hidden">md</span>
             <span class="hidden lg:inline xl:hidden">lg</span>

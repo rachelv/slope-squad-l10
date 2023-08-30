@@ -30,7 +30,8 @@
             "Database\\Seeders\\": "database/seeders/"
         },
         "files": [
-            "app/View/Helpers/Meta.php"
+            "app/View/Helpers/Meta.php",
+            "app/View/Helpers/Routes.php"
         ]
     },
     "autoload-dev": {
