@@ -34,16 +34,14 @@
 
                     <div class="col-span-12 md:col-span-8">
 
-                        {{--
                         <div class="space-y-2">
                             <h3>Recent Days</h3>
                             <livewire:mountain.snowday-list
                                 :mountain-id="$mountain->getId()"
                                 :season-id="$currentSeason->getId()"
                                 limit="6" />
-                            <x-more-link href="{{ route('mountains.snowdays', $mountain) }}">All {{ $currentSeason->getName() }} days</x-more-link>
+                            <x-nav.more-link href="{{ route('mountains.snowdays', $mountain) }}">All {{ $currentSeason->getName() }} days</x-nav.more-link>
                         </div>
-                        --}}
 
                     </div>
                 </div>

@@ -56,7 +56,6 @@ Route::prefix('members')->group(function () {
         ->whereNumber('id')
         ->name('users.mountains');
 
-
     Route::get('/{id}/mountains/{mountainId}', [UsersController::class, 'mountain'])
         ->whereNumber('id')
         ->whereNumber('mountainId')
@@ -70,9 +69,19 @@ Route::prefix('members')->group(function () {
         ->whereNumber('id')
         ->name('users.seasons.compare');
 
+    Route::get('/{id}/seasons/{seasonId}', [UsersController::class, 'season'])
+        ->whereNumber('id')
+        ->whereNumber('seasonId')
+        ->name('users.season');
+
     Route::get('/{id}/snowdays', [UsersController::class, 'snowdays'])
         ->whereNumber('id')
         ->name('users.snowdays');
+
+    Route::get('/{id}/snowdays/{snowdayId}', [UsersController::class, 'snowday'])
+        ->whereNumber('id')
+        ->whereNumber('snowdayId')
+        ->name('users.snowday');
 
     Route::get('/{id}/following', [UsersController::class, 'following'])
         ->whereNumber('id')

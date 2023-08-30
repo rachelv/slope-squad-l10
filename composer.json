@@ -30,8 +30,12 @@
             "Database\\Seeders\\": "database/seeders/"
         },
         "files": [
+            "app/View/Helpers/DateTime.php",
             "app/View/Helpers/Meta.php",
-            "app/View/Helpers/Routes.php"
+            "app/View/Helpers/Mountains.php",
+            "app/View/Helpers/Routes.php",
+            "app/View/Helpers/Snowdays.php",
+            "app/View/Helpers/Strings.php"
         ]
     },
     "autoload-dev": {

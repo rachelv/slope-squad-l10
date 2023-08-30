@@ -20,6 +20,47 @@
                         </div>
                     </div>
 
+                    <div class="col-span-12 md:col-span-9">
+                        <div class="space-y-2">
+                            <h3>Recent Days</h3>
+                            <livewire:user.snowday-list
+                                :user-id="$user->getId()"
+                                :season-id="$currentSeason->getId()"
+                                limit="2" />
+                            <x-nav.more-link href="{{ route('users.snowdays', $user) }}">All {{ $currentSeason->getName() }} days</x-nav.more-link>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-8">
+                        <div class="space-y-2">
+                            <h3>Mountains in {{ $currentSeason->getName() }}</h3>
+                            <livewire:user.mountain-map
+                                :user-id="$user->getId()"
+                                :season-id="$currentSeason->getId()" />
+                            <x-nav.more-link href="{{ route('users.mountains', $user) }}">All mountain details</x-nav.more-link>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-4">
+                        <div class="space-y-2">
+                            <h3>Days at Mountains</h3>
+                            <livewire:user.mountain-list
+                                :user-id="$user->getId()"
+                                :season-id="$currentSeason->getId()" />
+                        </div>
+                    </div>
+
+                    <div class="col-span-12">
+                        <div class="space-y-2">
+                            <h3>Leaderboard</h3>
+                            <livewire:user.leaderboard
+                                :user-id="$user->getId()"
+                                :season-id="$currentSeason->getId()"
+                                limit="5" />
+                            <x-nav.more-link href="{{ route('users.following', $user) }}">View full leaderboard</x-nav.more-link>
+                        </div>
+                    </div>
+
                 </div>
             </x-containers.box-primary>
 
