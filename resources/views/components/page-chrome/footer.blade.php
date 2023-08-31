@@ -1,4 +1,4 @@
-<div class="bg-blue py-10 text-white text-sm">
+<div class="bg-blue border-t-2 border-teal py-10 text-white text-sm">
     <div class="container flex flex-col items-center space-y-8">
         <div class="space-y-1 text-center">
             <p>&copy; {{ date('Y') }} <a class="text-white hover:text-white underline" target="_blank" href="https://www.winterfactory.com">Winter Factory, LLC</a></p>
