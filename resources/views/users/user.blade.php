@@ -56,7 +56,8 @@
                             <livewire:user.leaderboard
                                 :user-id="$user->getId()"
                                 :season-id="$currentSeason->getId()"
-                                limit="5" />
+                                limit="5"
+                                :hide-season-selector="true" />
                             <x-nav.more-link href="{{ route('users.following', $user) }}">View full leaderboard</x-nav.more-link>
                         </div>
                     </div>

@@ -15,6 +15,8 @@ class Leaderboard extends Component
     public int $seasonId = 0;
     public int $limit = 0;
 
+    public bool $hideSeasonSelector = false;
+
     public function render()
     {
         $followingUsers = $this->getFollowingUserStats();
@@ -23,6 +25,7 @@ class Leaderboard extends Component
             'user' => User::find($this->userId),
             'season' => Season::find($this->seasonId),
             'followingUsers' => $followingUsers,
+            'hideSeasonSelector' => $this->hideSeasonSelector,
         ]);
     }
 
