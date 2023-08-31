@@ -14,16 +14,13 @@
                     <div>{{ format_date($snowday->getDate()) }}</div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-6 py-3 items-center border-t border-b border-black-300 border-dotted">
-                    <div class="col-span-2 md:col-span-1 flex justify-center md:justify-start">
-                        {{--
-                            <livewire:user.snowday-stats :snowday-id="$snowday->getId()" />
-                            --}}
+                <div class="flex flex-col-reverse md:flex-row justify-between
+                        items-center border-t border-b border-black-300 border-dotted">
+                    <div class="py-3">
+                        <livewire:user.snowday-stats :snowday-id="$snowday->getId()" />
                     </div>
-                    <div class="col-span-2 md:col-span-1 flex justify-center md:justify-end">
-                        {{--
-                            <livewire:user.snowday-nav :snowday-id="$snowday->getId()" />
-                         --}}
+                    <div class="py-3 border-b border-black-300 border-dotted md:border-none">
+                        <livewire:user.snowday-nav :snowday-id="$snowday->getId()" />
                     </div>
                 </div>
 
