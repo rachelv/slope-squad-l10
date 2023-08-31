@@ -20,6 +20,16 @@ class UsersController extends SlopeSquadBaseController
         ]);
     }
 
+    public function seasonsCompare(int $id): View
+    {
+        $user = User::findOrFail($id);
+
+        return view('users.seasons-compare', [
+            'loggedInUser' => $this->getLoggedInUser(),
+            'user' => $user
+        ]);
+    }
+
     public function snowdays(int $id): View
     {
         $user = User::findOrFail($id);
