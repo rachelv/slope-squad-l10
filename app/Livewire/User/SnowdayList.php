@@ -3,6 +3,7 @@
 namespace App\Livewire\User;
 
 use App\Models\Snowday;
+use App\Models\User;
 use Illuminate\Support\Collection;
 use Livewire\Component;
 
@@ -14,6 +15,8 @@ class SnowdayList extends Component
 
     public int $limit = 0;
 
+    public bool $hideSeasonSelector = false;
+
     public string $context = 'snowday';
 
     public function render()
@@ -24,6 +27,7 @@ class SnowdayList extends Component
         $totalSeasons = $this->getTotalSeasons($snowdays);
 
         return view("livewire.user.{$this->getViewName()}", [
+            'user' => User::find($this->userId),
             'snowdays' => $snowdays,
             'totalMountains' => $totalMountains,
             'totalSeasons' => $totalSeasons,

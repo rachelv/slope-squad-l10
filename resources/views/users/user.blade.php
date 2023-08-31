@@ -26,6 +26,7 @@
                             <livewire:user.snowday-list
                                 :user-id="$user->getId()"
                                 :season-id="$currentSeason->getId()"
+                                :hide-season-selector="true"
                                 limit="2" />
                             <x-nav.more-link href="{{ route('users.snowdays', $user) }}">All {{ $currentSeason->getName() }} days</x-nav.more-link>
                         </div>
@@ -56,8 +57,8 @@
                             <livewire:user.leaderboard
                                 :user-id="$user->getId()"
                                 :season-id="$currentSeason->getId()"
-                                limit="5"
-                                :hide-season-selector="true" />
+                                :hide-season-selector="true"
+                                limit="5" />
                             <x-nav.more-link href="{{ route('users.following', $user) }}">View full leaderboard</x-nav.more-link>
                         </div>
                     </div>

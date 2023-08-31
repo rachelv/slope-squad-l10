@@ -25,7 +25,6 @@ class Leaderboard extends Component
             'user' => User::find($this->userId),
             'season' => Season::find($this->seasonId),
             'followingUsers' => $followingUsers,
-            'hideSeasonSelector' => $this->hideSeasonSelector,
         ]);
     }
 
