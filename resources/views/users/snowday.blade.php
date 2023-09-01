@@ -17,10 +17,10 @@
                 <div class="flex flex-col-reverse md:flex-row justify-between
                         items-center border-t border-b border-black-300 border-dotted">
                     <div class="py-3">
-                        <livewire:user.snowday-stats :snowday-id="$snowday->getId()" />
+                        <livewire:user.snowday-stats :snowday-id="$snowday->getId()" lazy />
                     </div>
                     <div class="py-3 border-b border-black-300 border-dotted md:border-none">
-                        <livewire:user.snowday-nav :snowday-id="$snowday->getId()" />
+                        <livewire:user.snowday-nav :snowday-id="$snowday->getId()" lazy />
                     </div>
                 </div>
 

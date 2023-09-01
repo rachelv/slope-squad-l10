@@ -1,5 +1,4 @@
 <div class="space-y-4">
-
     @if (!$hideSeasonSelector)
         <x-forms.select wire:model.live="seasonId">
             @foreach ($user->getSeasons() as $s)
@@ -25,9 +24,5 @@
         @empty
             <x-empty-message />
         @endforelse
-    </div>
-
-    <div wire:loading.delay>
-        <x-loading-spinner />
     </div>
 </div>

@@ -9,16 +9,6 @@
             <x-containers.box-primary class="space-y-3">
                 <h2>All Snowdays</h2>
 
-                {{--
-                <div x-data="{ seasonId: {{ $user->getSeasons()->first()->getId() }} }">
-                    <x-forms.select x-model="seasonId" @change="Livewire.emit('refreshSnowdays', seasonId)">
-                        @foreach ($user->getSeasons() as $season)
-                            <option value="{{ $season->getId() }}">{{ $season->getName() }}</option>
-                        @endforeach
-                    </x-forms.select>
-                </div>
-                --}}
-
                 <livewire:user.snowday-list
                     :user-id="$user->getId()"
                     :season-id="$user->getSeasons()->first()->getId()" />

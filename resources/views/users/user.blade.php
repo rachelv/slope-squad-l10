@@ -37,7 +37,8 @@
                             <h3>Mountains in {{ $currentSeason->getName() }}</h3>
                             <livewire:user.mountain-map
                                 :user-id="$user->getId()"
-                                :season-id="$currentSeason->getId()" />
+                                :season-id="$currentSeason->getId()"
+                                lazy />
                             <x-nav.more-link href="{{ route('users.mountains', $user) }}">All mountain details</x-nav.more-link>
                         </div>
                     </div>
@@ -47,7 +48,8 @@
                             <h3>Days at Mountains</h3>
                             <livewire:user.mountain-list
                                 :user-id="$user->getId()"
-                                :season-id="$currentSeason->getId()" />
+                                :season-id="$currentSeason->getId()"
+                                lazy />
                         </div>
                     </div>
 
@@ -58,7 +60,8 @@
                                 :user-id="$user->getId()"
                                 :season-id="$currentSeason->getId()"
                                 :hide-season-selector="true"
-                                limit="5" />
+                                limit="5"
+                                lazy />
                             <x-nav.more-link href="{{ route('users.following', $user) }}">View full leaderboard</x-nav.more-link>
                         </div>
                     </div>

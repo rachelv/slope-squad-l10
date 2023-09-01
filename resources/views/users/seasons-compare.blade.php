@@ -10,7 +10,8 @@
                 <h2>Season Comparison</h2>
 
                 <livewire:user.season-comparison-list
-                    :user-id="$user->getId()" />
+                    :user-id="$user->getId()"
+                    lazy />
 
                 </x-containers.box-primary>
         </div>
