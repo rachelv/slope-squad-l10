@@ -20,6 +20,14 @@
     }
 }
 
+.ssq-default {
+    @apply text-teal;
+}
+.ssq-default:hover {
+    @apply text-orange;
+    @apply underline;
+}
+
 [x-cloak] {
     display: none !important;
 }

@@ -16,11 +16,11 @@
                     <x-slot name="left">
                         <div class="space-x-1">
                             <span class="text-black-500">{{ $idx + 1 }}.</span>
-                            <a href="{{ route_user_mountain($leaderboardStat->getUser(), $mountain) }}">{{ $leaderboardStat->getUser()->getName() }}</a>
+                            <a class="ssq-default" href="{{ route_user_mountain($leaderboardStat->getUser(), $mountain) }}">{{ $leaderboardStat->getUser()->getName() }}</a>
                         </div>
                     </x-slot>
                     <x-slot name="right">
-                        <a href="{{ route_user_mountain($leaderboardStat->getUser(), $mountain) }}">{{ $leaderboardStat->getTotalSnowdays() }}</a>
+                        <a class="ssq-default" href="{{ route_user_mountain($leaderboardStat->getUser(), $mountain) }}">{{ $leaderboardStat->getTotalSnowdays() }}</a>
                     </x-slot>
                 </x-list-items.left-right>
             @empty
