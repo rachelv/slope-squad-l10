@@ -17,14 +17,16 @@
                                 <livewire:mountain.leaderboard
                                     :mountain-id="$mountain->getId()"
                                     :season-id="$currentSeason->getId()"
+                                    :hide-season-selector="true"
                                     limit="4" />
-                                <x-nav.more-link href="{{ route('mountains.leaderboard', $mountain) }}">Full leaderboard</x-nav.more-link>
+                                <x-nav.more-link href="{{ route('mountains.leaderboard', $mountain) }}">Full {{ $currentSeason->getShortName() }} leaderboard</x-nav.more-link>
                             </div>
 
                             <div class="space-y-2">
                                 <h3>Most Days All Time</h3>
                                 <livewire:mountain.leaderboard
                                     :mountain-id="$mountain->getId()"
+                                    :hide-season-selector="true"
                                     limit="4" />
                                 <x-nav.more-link href="{{ route('mountains.leaderboard', $mountain) }}">Full leaderboard</x-nav.more-link>
                             </div>
@@ -39,6 +41,7 @@
                             <livewire:mountain.snowday-list
                                 :mountain-id="$mountain->getId()"
                                 :season-id="$currentSeason->getId()"
+                                :hide-season-selector="true"
                                 limit="6" />
                             <x-nav.more-link href="{{ route('mountains.snowdays', $mountain) }}">All {{ $currentSeason->getName() }} days</x-nav.more-link>
                         </div>

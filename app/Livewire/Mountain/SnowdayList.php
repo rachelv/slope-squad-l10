@@ -15,6 +15,8 @@ class SnowdayList extends Component
 
     public int $limit = 0;
 
+    public bool $hideSeasonSelector = false;
+
     public function render()
     {
         $mountain = Mountain::find($this->mountainId);
@@ -26,6 +28,7 @@ class SnowdayList extends Component
             'mountain' => $mountain,
             'season' => $season,
             'snowdays' => $snowdays,
+            'seasons' => Season::allSeasons(),
         ]);
     }
 

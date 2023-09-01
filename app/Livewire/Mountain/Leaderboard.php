@@ -16,6 +16,8 @@ class Leaderboard extends Component
 
     public int $limit = 0;
 
+    public bool $hideSeasonSelector = false;
+
     public function render()
     {
         $mountain = Mountain::find($this->mountainId);
@@ -27,6 +29,7 @@ class Leaderboard extends Component
             'mountain' => $mountain,
             'season' => $season,
             'leaderboardStats' => $leaderboardStats,
+            'seasons' => Season::allSeasons(),
         ]);
     }
 
