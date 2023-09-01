@@ -10,10 +10,8 @@
                 <div class="grid grid-cols-3 gap-4">
                     <div class="col-span-3 md:col-span-1">
                         <div class="space-y-3">
-                            <a class="block" href="{{ route('users.mountains', $user) }}">
-                                <span class="fa-solid fa-arrow-left text-sm"></span>
-                                All Mountains
-                            </a>
+                            <x-nav.back-link href="{{ route('users.mountains', $user) }}">All Mountains</x-nav.back-link>
+
                             <h2>{{ $mountain->getName() }}</h2>
 
                             <livewire:user.snowday-list
