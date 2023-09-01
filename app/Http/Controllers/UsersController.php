@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Mountain;
 use App\Models\Season;
 use App\Models\Snowday;
 use App\Models\User;
@@ -20,6 +21,16 @@ class UsersController extends SlopeSquadBaseController
         ]);
     }
 
+    public function seasons(int $id): View
+    {
+        $user = User::findOrFail($id);
+
+        return view('users.seasons', [
+            'loggedInUser' => $this->getLoggedInUser(),
+            'user' => $user,
+        ]);
+    }
+
     public function seasonsCompare(int $id): View
     {
         $user = User::findOrFail($id);
@@ -27,6 +38,40 @@ class UsersController extends SlopeSquadBaseController
         return view('users.seasons-compare', [
             'loggedInUser' => $this->getLoggedInUser(),
             'user' => $user
+        ]);
+    }
+
+    public function season(int $id, int $seasonId): View
+    {
+        $user = User::findOrFail($id);
+        $season = Season::findOrFail($seasonId);
+
+        return view('users.season', [
+            'loggedInUser' => $this->getLoggedInUser(),
+            'user' => $user,
+            'season' => $season,
+        ]);
+    }
+
+    public function mountains(int $id): View
+    {
+        $user = User::findOrFail($id);
+
+        return view('users.mountains', [
+            'loggedInUser' => $this->getLoggedInUser(),
+            'user' => $user,
+        ]);
+    }
+
+    public function mountain(int $id, int $mountainId): View
+    {
+        $user = User::findOrFail($id);
+        $mountain = Mountain::findOrFail($mountainId);
+
+        return view('users.mountain', [
+            'loggedInUser' => $this->getLoggedInUser(),
+            'user' => $user,
+            'mountain' => $mountain,
         ]);
     }
 

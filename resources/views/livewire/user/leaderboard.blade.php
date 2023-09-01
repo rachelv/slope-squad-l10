@@ -1,11 +1,7 @@
 <div class="space-y-4">
 
     @if (!$hideSeasonSelector)
-        <x-forms.select wire:model.live="seasonId">
-            @foreach ($user->getSeasons() as $s)
-                <option value="{{ $s->getId() }}">{{ $s->getName() }}</option>
-            @endforeach
-        </x-forms.select>
+        <x-forms.season-dropdown :seasons="$user->getSeasons()" :include-all-time="true" />
     @endif
 
     <div class="space-y-2">

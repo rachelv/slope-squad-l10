@@ -6,6 +6,7 @@ use App\Interfaces\TotalSnowdaysInterface;
 use App\Models\Season;
 use App\Models\StatsUserMountain;
 use App\Models\StatsUserSeasonMountain;
+use App\Models\User;
 use Illuminate\Support\Collection;
 use Livewire\Component;
 
@@ -28,6 +29,7 @@ class MountainList extends Component
         $totalMountains = count($mountainStats);
 
         return view("livewire.user.{$this->getViewName()}", [
+            'user' => User::find($this->userId),
             'season' => $season,
             'mountainStats' => $mountainStats,
             'totalDays' => $totalDays,

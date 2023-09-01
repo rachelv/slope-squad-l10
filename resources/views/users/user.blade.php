@@ -50,6 +50,7 @@
                                 :user-id="$user->getId()"
                                 :season-id="$currentSeason->getId()"
                                 lazy />
+                            <x-nav.more-link href="{{ route('users.mountains', $user) }}">All mountain details</x-nav.more-link>
                         </div>
                     </div>
 
