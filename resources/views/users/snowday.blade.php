@@ -8,7 +8,7 @@
 
             <x-containers.box-primary class="space-y-4">
                 <div class="space-y-1">
-                    <a href="{{ route_user_mountain($user, $snowday->getMountain()) }}">
+                    <a class="ssq-default" href="{{ route_user_mountain($user, $snowday->getMountain()) }}">
                         <h2>{{ snowday_title($snowday, MTN_FULL_FULL) }}</h2>
                     </a>
                     <div>{{ format_date($snowday->getDate()) }}</div>
